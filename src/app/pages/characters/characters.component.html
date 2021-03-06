@@ -3,8 +3,6 @@
 
         <div fxFlex="25" fxFlex.md="33" fxFle.sm="50" fxFlex.xs="100" fxLayout="column"
             *ngFor="let character  of allCharacters | async" style="padding: 15px">
-            <!-- usar quando terminar o serviço
-                <app-search-character-form [search]="search"></app-search-character-form> -->
 
             <app-character [character]="character"></app-character>
         </div>
