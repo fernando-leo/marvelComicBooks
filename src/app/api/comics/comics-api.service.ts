@@ -7,10 +7,10 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ComicsApiService {
-  // PUBLIC_KEY = '25cad3a7b66b49ab0c1874ffcd632de5';
-  // HASH = '3717b65c0b320ed6984b9abfa913322b';
+  PUBLIC_KEY = '25cad3a7b66b49ab0c1874ffcd632de5';
+  HASH = '3717b65c0b320ed6984b9abfa913322b';
 
-  URL_API = 'https://gateway.marvel.com/v1/public/comics?ts=thesoer&apikey=25cad3a7b66b49ab0c1874ffcd632de5&hash=3717b65c0b320ed6984b9abfa913322b';
+  URL_API = `https://gateway.marvel.com/v1/public/comics?ts=thesoer&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
 
   constructor(private http: HttpClient) { }
 

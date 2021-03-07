@@ -1,10 +1,16 @@
 <div fxFlex fxLayout="column">
+    <form [formGroup]="FilterForm">
+        <input type="text" placeholder=" Nome do personagem" formControlName="name">
+        <button mat-flat-button color="primary" (click)="filter()">Buscar</button>
+    </form>
     <div fxLayout="row wrap">
 
-        <div fxFlex="25" fxFlex.md="33" fxFle.sm="50" fxFlex.xs="100" fxLayout="column"
-            *ngFor="let character  of allCharacters | async" style="padding: 15px">
+        <div fxFlex="25" fxFlex.md="33" fxFle.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let character  of allCharacters | paginate: {  itemsPerPage: 10,
+                currentPage: page,
+                totalItems: totalRecords }" style="padding: 15px">
 
             <app-character [character]="character"></app-character>
         </div>
     </div>
+    <pagination-controls (pageChange)="handlePageChange($event)"></pagination-controls>
 </div>

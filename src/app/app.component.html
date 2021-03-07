@@ -1,6 +1,11 @@
 <mat-toolbar color="primary">
-    <span>HQs Marvel</span>
+    <!-- <span>Catálogo Marvel Comics</span> -->
+    <mat-button (click)="ShowHQs()" [routerLink]>HQs</mat-button>
+    <mat-button (click)="ShowCharacters()" [routerLink]>Personagens</mat-button>
+
 </mat-toolbar>
-<div class="container-fluid">
-    <router-outlet></router-outlet>
+
+<div class="main_content">
+    <app-comics *ngIf="showHQs"></app-comics>
+    <app-characters *ngIf="showCharacters"></app-characters>
 </div>

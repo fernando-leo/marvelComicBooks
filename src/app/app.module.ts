@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -18,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ComicsComponent } from './pages/comics/comics.component';
 import { ComicComponent } from './pages/comics/comic/comic.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,18 +33,20 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BrowserAnimationsModule,
     AppRoutingModule,
     FlexLayoutModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule,
     MatCardModule,
     MatFormFieldModule,
     NgxPaginationModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
