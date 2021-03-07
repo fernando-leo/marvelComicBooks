@@ -1,0 +1,23 @@
+<mat-card>
+    <img mat-card-image src={{comic.thumbnail.path}}.{{comic.thumbnail.extension}} alt="{{comic.title}}">
+
+    <mat-card-title>
+        {{comic.title}}
+    </mat-card-title>
+
+    <mat-card-content>
+
+        <table>
+            <tr>
+                <td *ngFor="let image of comic.images">
+                    <img src={{image.path}}.{{image.extension}} />
+                </td>
+            </tr>
+        </table>
+        {{comic.description}}
+    </mat-card-content>
+
+    <mat-card-footer>
+        <a href="{{comic.urls[0].url}}" target="_blank" fxFlex mat-flat-button color="primary">Detalhes </a>
+    </mat-card-footer>
+</mat-card>

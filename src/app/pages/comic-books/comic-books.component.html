@@ -1,0 +1,12 @@
+<div fxFlex fxLayout="column">
+    <div fxLayout="row wrap">
+
+        <div fxFlex="25" fxFlex.md="33" fxFle.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let comic of allComics | paginate: {  itemsPerPage: 10,
+                                                                currentPage: page,
+                                                                totalItems: totalRecords }" style="padding: 15px">
+
+            <app-comic-book [comic]="comic"></app-comic-book>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="handlePageChange($event)"></pagination-controls>
+</div>

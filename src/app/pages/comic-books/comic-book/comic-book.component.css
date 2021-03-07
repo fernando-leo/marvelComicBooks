@@ -1,0 +1,12 @@
+.mat-card{
+    background-color: black;
+    color: white;
+}
+
+img.mat-card-image {
+    height: 19rem;
+}
+
+img {
+    height: 3rem;
+}

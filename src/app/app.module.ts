@@ -15,18 +15,20 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { CharacterComponent } from './pages/characters/character/character.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ComicsComponent } from './pages/comics/comics.component';
-import { ComicComponent } from './pages/comics/comic/comic.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ComicBooksComponent } from './pages/comic-books/comic-books.component';
+import { ComicBookComponent } from './pages/comic-books/comic-book/comic-book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
     CharacterComponent,
-    ComicsComponent,
-    ComicComponent
+    ComicBooksComponent,
+    ComicBookComponent,
+    ComicBooksComponent,
+    ComicBookComponent
   ],
   imports: [
     BrowserModule,
